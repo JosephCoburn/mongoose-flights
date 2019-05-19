@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+</head>
+<body>
+    <h2>Enter a New Flight</h2>
+<form action="/flights" method="POST">
+	<label>Airline:
+	  <input type="text" name="airline">
+	</label><br>
+	<label>Flight Number:
+	  <input type="number" name="flightNo">
+	</label><br>
+	<label>Date of Departure:
+	  <input type="date" name="departs">
+	</label><br>
+	<label>Passengers (separate passengers with commas):
+	  <input type="text" name="passengers">
+	</label><br>
+	<label>On Time:
+	  <input type="checkbox" name="onTime" checked>
+	</label><br>
+	<input type="submit" value="Add Flight">
+</form>
+</body>
+</html>
