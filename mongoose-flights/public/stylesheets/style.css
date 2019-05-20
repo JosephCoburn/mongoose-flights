@@ -1,10 +1,23 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Archivo Narrow', sans-serif;
+  background: #CCC;
+  text-align: center;
 }
 
-a {
-  color: #00B7FF;
+section {
+  padding: 10px 40px 40px 40px;
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Damion', cursive;
+  font-size: 48px;
+  text-align: center;
+  margin: 10px 0;
+  color: rgb(139, 222, 255);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 ul {
@@ -12,7 +25,8 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  color: rgb(139, 222, 255);
+  background-color: #222222;
 }
 
 li {
@@ -20,8 +34,9 @@ li {
 }
 
 li a {
+  border-right: 1px solid #CCCCCC;
   display: block;
-  color: white;
+  color:rgb(139, 222, 255);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -30,4 +45,50 @@ li a {
 /* Change the link color to #111 (black) on hover */
 li a:hover {
   background-color: #111;
+}
+
+.colCent {
+  text-align: center;
+}
+
+th {
+  background: #222222;
+  color: rgb(139, 222, 255);
+}
+
+tbody tr:nth-child(even){
+  background-color: rgb(128, 128, 128);
+}
+
+tbody td:nth-child(odd){
+  border-right: 0.5px solid rgb(128, 128, 128);
+  border-left: 0.5px solid rgb(128, 128, 128);
+}
+
+label {
+  font-size: 25px;
+}
+
+input {
+  float: right;
+  clear: both;
+  border: 1px solid rgb(139, 222, 255);
+  border-radius: 8px;
+  height: 25px;
+  background: #222222;
+  color: #CCC;
+}
+
+form {
+  width: 90%;
+  display: inline-block;
+} 
+
+.add {
+  background: rgb(139, 222, 255);
+  color: #222222;
+  border: 1px solid #222222;
+  font-size: 25px;
+  height: 60px;
+  width: 150px;
 }

@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+		<title>Document</title>
+		<link href="https://fonts.googleapis.com/css?family=Damion&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Archivo+Narrow&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='/stylesheets/style.css' />
-
 </head>
 <body>
     <nav> 
@@ -14,7 +15,8 @@
             <li><a href='/flights/'>All Flights</a></li>
             <li><a href='/flights/new'>Add Flight</a></li>
         </ul>
-    </nav>
+		</nav>
+	<section>
     <h2>Enter a New Flight</h2>
 <form action="/flights" method="POST">
 	<label>Airline:
@@ -32,7 +34,8 @@
 	<label>On Time:
 	  <input type="checkbox" name="onTime" checked>
 	</label><br>
-	<input type="submit" value="Add Flight">
+	<input class="add" type="submit" value="Add Flight">
 </form>
+</section>
 </body>
 </html>
