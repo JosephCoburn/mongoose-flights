@@ -21,12 +21,15 @@ function create(req, res) {
     req.body.passengers = req.body.passengers.replace(/\s*,\s*/g, ',');
     // split if passengers is not empty string
     if (req.body.passengers) req.body.passengers = req.body.passengers.split(',');
+    for (let key in req.body) {
+        if (req.body[key] === '') delete req.body[key];
+    }
     var flight = new Flight(req.body);
     flight.save(function(err) {
         // one way to handle errors in express
         if (err) return res.render('flights/new');
         console.log(flight);
-        res.redirect('/flights/new');
+        res.redirect('/flights');
     });
 }
 
