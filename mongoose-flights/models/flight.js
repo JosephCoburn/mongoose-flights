@@ -5,7 +5,8 @@ const destinationSchema = new Schema({
     arrival: Date,
     airport: {
         type: String,
-        enum: ['AUS', 'DAL', 'LAX', 'SEA']
+        enum: ['AUS', 'DAL', 'LAX', 'SEA'],
+        default: 'SEA'
     }
 }, {
     timestamps: true
@@ -27,12 +28,12 @@ const flightSchema = new Schema({
         type: Date, 
         default: Date.now() + 366*24*60*60000
     },
-    passengers: [String],
     onTime: {
         type: Boolean, 
         default: false 
     }, 
-    destinations: [destinationSchema]
+    destinations: [destinationSchema],
+    ticket: [{type: Schema.Types.ObjectId, ref: 'Ticket'}]
 }, {
     timestamps: true
 });

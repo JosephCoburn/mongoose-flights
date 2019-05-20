@@ -69,13 +69,6 @@ tbody td:nth-child(odd){
   border-right: 0.5px solid rgb(128, 128, 128);
   border-left: 0.5px solid rgb(128, 128, 128);
 }
-/* 
-label {
-  font-size: 25px;
-  display: grid;
-  float: left;
-  clear: both;  
-} */
 
 input, select {
   float: right;
@@ -86,11 +79,6 @@ input, select {
   background: #222222;
   color: #CCC;
 }
-
-/* form {
-  width: 90%;
-  display: inline-block;
-}  */
 
 .add {
   background: rgb(139, 222, 255);
@@ -111,8 +99,16 @@ img {
   margin: 6px 8px 0 0;
 }
 
+.addFlightForm {
+  /* margin: 0 0 0 30vw; */
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto auto auto;
+  text-align: center;
+}
+
 form {
-  margin: 0 0 0 25vw;
+  margin: 0 0 0 30vw;
   display: grid;
   grid-template-columns: 150px 150px;
   grid-template-rows: 36px 36px 36px;
@@ -121,9 +117,53 @@ form {
 .addDest {
   margin: 0 0 0 15vw;
   width: 110px;
-  color: 
+  float: right;
+  clear: both;
+  border: 1px solid rgb(139, 222, 255);
+  border-radius: 8px;
+  height: 25px;
+  background: #222222;
+  color: #CCC;
 }
 
 table {
   margin: 0 0 0 9vw;
+}
+
+.addFlightButton {
+  height: 50px;
+  width: 150px;
+  margin: 0 0 0 230px;
+}
+
+#add-ticket-form * {
+  font-size: 20px;
+}
+
+#add-ticket-form {
+  display: grid;
+}	
+
+#add-ticket-form input[type="submit"] {
+  width: 10rem;
+}
+
+ul {
+  margin: 0 0 1rem;
+  padding: 0;
+  list-style: none;
+  font-weight: bold;
+}
+
+li {
+  font-weight: bold;
+}
+
+.tickets-info {
+  display: inline-block;
+  background: none;
+}
+
+.title {
+  font-weight: bold;
 }

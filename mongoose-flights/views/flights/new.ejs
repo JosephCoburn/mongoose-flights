@@ -1,23 +1,20 @@
 <%- include('../partials/header') %>
 
     <h2>Enter a New Flight</h2>
-<form action="/flights" method="POST">
-	<label>Airline:
-	  <input type="text" name="airline">
+<form class="addFlightForm" action="/flights" method="POST">
+	<label class="addFlight">Airline:
+	  <input class="addFlight" type="text" name="airline">
 	</label><br>
-	<label>Flight Number:
-	  <input type="number" name="flightNo">
+	<label class="addFlight">Flight Number:
+	  <input class="addFlight" type="number" name="flightNo">
 	</label><br>
-	<label>Date of Departure:
-	  <input type="date" name="departs">
+	<label class="addFlight">Date of Departure:
+	  <input class="addFlight" type="date" name="departs">
 	</label><br>
-	<label>Passengers (separate passengers with commas):
-	  <input type="text" name="passengers">
+	<label class="addFlight">On Time:
+	  <input class="addFlight" type="checkbox" name="onTime" checked>
 	</label><br>
-	<label>On Time:
-	  <input type="checkbox" name="onTime" checked>
-	</label><br>
-	<input class="add" type="submit" value="Add Flight">
+	<input class="addFlightButton" class="addFlightButton" type="submit" value="Add Flight">
 </form>
 </section>
 </body>

@@ -1,4 +1,5 @@
 const Flight = require('../models/flight');
+const Ticket = require('../models/ticket');
 
 module.exports = {
     index,
@@ -14,8 +15,17 @@ function index(req, res) {
 }
 
 function show(req, res) {
-    Flight.findById(req.params.id, function(err, flight) {
-        res.render('flights/show', {title: 'Flight Detail', flight });
+    Flight.findById(req.params.id)
+    .populate('ticket')
+    .exec(function(err, flight) {
+        Ticket.find({_id: {$nin: flight.ticket}}, function(err, tickets) {
+            console.log(tickets);
+            res.render('flights/show', {
+                title: 'Flight Detail', 
+                flight,
+                tickets
+            });
+        });
     });
 }
 
@@ -26,10 +36,6 @@ function newFlight(req, res) {
 function create(req, res) {
     // convert onTime checkbox to a boolean
     req.body.onTime = !!req.body.onTime;
-    // remove extra whitespace next to commas
-    req.body.passengers = req.body.passengers.replace(/\s*,\s*/g, ',');
-    // split if passengers is not empty string
-    if (req.body.passengers) req.body.passengers = req.body.passengers.split(',');
     for (let key in req.body) {
         if (req.body[key] === '') delete req.body[key];
     }
@@ -38,6 +44,6 @@ function create(req, res) {
         // one way to handle errors in express
         if (err) return res.render('flights/new');
         console.log(flight);
-        res.redirect('/flights');
+        res.redirect(`/flights/${flight._id}`);
     });
 }

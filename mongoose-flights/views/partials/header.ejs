@@ -12,8 +12,11 @@
 <body>
     <nav> 
         <ul>
-            <li><a href='/flights/'>All Flights</a></li>
-            <li><a href='/flights/new'>Add Flight</a></li>
+            <li><a href='/tickets/new'
+                <%- title === 'Add Ticket' ? 'class="active"' : '' %>
+                >Add Ticket:</a></li>
+            <li><a href='/flights/' <%- title === 'All Flights' ? 'class="active"' : '' %>>All Flights</a></li>
+            <li><a href='/flights/new' <%- title === 'Add Flight' ? 'class="active"' : '' %>>Add Flight</a></li>
             <li><img class='icon' src="/images/plane.png"></li>
         </ul>
 	</nav>
