@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  font-family: Helvetica;
+  color: #424748;
+}
+
 body {
   font-family: 'Archivo Narrow', sans-serif;
   background: #CCC;
@@ -12,7 +18,7 @@ section {
 }
 
 h2 {
-  font-family: 'Damion', cursive;
+  font-family: 'Cantarell', sans-serif;
   font-size: 48px;
   text-align: center;
   margin: 10px 0;
@@ -63,12 +69,15 @@ tbody td:nth-child(odd){
   border-right: 0.5px solid rgb(128, 128, 128);
   border-left: 0.5px solid rgb(128, 128, 128);
 }
-
+/* 
 label {
   font-size: 25px;
-}
+  display: grid;
+  float: left;
+  clear: both;  
+} */
 
-input {
+input, select {
   float: right;
   clear: both;
   border: 1px solid rgb(139, 222, 255);
@@ -78,10 +87,10 @@ input {
   color: #CCC;
 }
 
-form {
+/* form {
   width: 90%;
   display: inline-block;
-} 
+}  */
 
 .add {
   background: rgb(139, 222, 255);
@@ -100,4 +109,21 @@ img {
   position:absolute;
   right:10px;
   margin: 6px 8px 0 0;
+}
+
+form {
+  margin: 0 0 0 25vw;
+  display: grid;
+  grid-template-columns: 150px 150px;
+  grid-template-rows: 36px 36px 36px;
+}
+
+.addDest {
+  margin: 0 0 0 15vw;
+  width: 110px;
+  color: 
+}
+
+table {
+  margin: 0 0 0 9vw;
 }
