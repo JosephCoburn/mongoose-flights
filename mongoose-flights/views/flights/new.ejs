@@ -1,22 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<title>Document</title>
-		<link href="https://fonts.googleapis.com/css?family=Damion&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Archivo+Narrow&display=swap" rel="stylesheet">
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-</head>
-<body>
-    <nav> 
-        <ul>
-            <li><a href='/flights/'>All Flights</a></li>
-            <li><a href='/flights/new'>Add Flight</a></li>
-        </ul>
-		</nav>
-	<section>
+<%- include('../partials/header') %>
+
     <h2>Enter a New Flight</h2>
 <form action="/flights" method="POST">
 	<label>Airline:

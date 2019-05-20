@@ -1,21 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link href="https://fonts.googleapis.com/css?family=Damion&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow&display=swap" rel="stylesheet">
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-</head>
-<body>
-  <nav>
-    <ul>
-        <li><a href='/flights/'>All Flights</a></li>
-        <li><a href='/flights/new'>Add Flight</a></li>
-    </ul>
-  </nav>
+<%- include('../partials/header') %>
+
   <section>
     <h2>All Flights</h2>
     <table>
@@ -26,6 +10,7 @@
           <th>Departure Date</th>
           <th>Passengers</th>
           <th>On Time</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
@@ -36,8 +21,9 @@
             <td><%= f.departs %></td>
             <td><%= f.passengers.join(', ') %></td>
             <td class = "colCent"><%= f.onTime ? 'Yes' : 'No' %></td>
-            <% }); %>
+            <td><a href="/flights/<%= f._id %>">DETAILS</a></td>
           </tr>
+          <% }); %>
       </tbody>
     </table>
   </section>

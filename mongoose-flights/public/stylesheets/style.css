@@ -42,7 +42,6 @@ li a {
   text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
 li a:hover {
   background-color: #111;
 }
@@ -91,4 +90,14 @@ form {
   font-size: 25px;
   height: 60px;
   width: 150px;
+}
+
+img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  margin-right: auto;
+  position:absolute;
+  right:10px;
+  margin: 6px 8px 0 0;
 }
